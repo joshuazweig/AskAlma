@@ -17,10 +17,15 @@ Rails.application.routes.draw do
 
   post 'searches/index' => 'searches#index', as: 'searches'
 
+  get 'categories/:category', to: 'questions#index', as: "category"
+
   get 'searches/search_questions' => 'searches#search_questions', as: 'search_questions'
 
   get 'searches/search_answers' => 'searches#search_answers', as: 'search_answers'
 
+  get 'searches/search_categories' => 'searches#search_categories', as: 'search_categories'
+
+  #get 'categories/:category', to: 'questions#index', as: :category
 
 
   # Example of regular route:

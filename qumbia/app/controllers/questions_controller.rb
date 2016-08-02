@@ -10,7 +10,11 @@ class QuestionsController < ApplicationController
     end 
 
 	def index
-		@questions = Question.all
+		if params[:category]
+			@questions = Question.tagged_with(params[:category])
+		else
+			@questions = Question.all
+		end
 	end
 
 	def show
@@ -55,6 +59,6 @@ class QuestionsController < ApplicationController
 
 	private
 		def question_params
-			params.require(:question).permit(:title, :text)
+			params.require(:question).permit(:title, :text, :all_categories)
 		end
 end

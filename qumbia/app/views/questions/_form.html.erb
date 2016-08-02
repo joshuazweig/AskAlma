@@ -7,6 +7,12 @@
 		<div class="form-group">
 			<%= f.text_area :text, label: "Description: ", placeholder: "Enter Details ... ", size: '60x6' %>
 		</div>
+
+		<div class="form-group">
+			<%= f.text_field :all_categories, label: "Categories: ", placeholder: "Categories separated by commas" %>
+		</div>
+
+
 		
 		<%= f.submit "Create", class: "btn btn-success"%>
 	<% end %>

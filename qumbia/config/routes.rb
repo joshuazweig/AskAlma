@@ -9,13 +9,17 @@ Rails.application.routes.draw do
 
   resources :questions, :defaults => { :format => 'json' } do
     resources :answers, :defaults => { :format => 'json' } 
+  get 'welcome/index'
+
+  resources :questions do
+    resources :answers
   end
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  root 'questions#index'
+  root 'welcome#index'
 
   post 'searches/index' => 'searches#index', as: 'searches'
 

@@ -5,7 +5,7 @@ class WelcomeController < ApplicationController
           redirect_to :controller => :questions, :action => 'index'
       end
   end
-  
+
   def resource_name
 	:user
   end

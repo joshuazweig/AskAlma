@@ -17,71 +17,7 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
- /* Eric Meyer's Reset CSS v2.0 - http://cssreset.com */
-html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{border:0;font-size:100%;vertical-align:baseline;margin:0;padding:0}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:none}table{border-collapse:collapse;border-spacing:0}
-
-/* Default header styles */
-h1, h2, h3, h4, h5, h6 {
-	font-family:  'Roboto', sans-serif;
-	font-weight: 400;
-	color: #fff;
-	line-height: 1.7; }
-h1 {
-	font-size: 2.75rem; }
-h2 {
-	font-size: 1.6875rem; }
-h3 {
-	font-size: 1.375rem; }
-h4 {
-	font-size: 1.125rem; }
-h5 {
-	font-size: 1.125rem; }
-h6 {
-	font-size: 1rem; }
-
-/* Base element styles */
-html {
-	background-color: white;
-}
-
-body {
-	font-family: 'Roboto', sans-serif;
-	font-size: 14px;
-  color: #fff;
-	line-height: 22px;
-	background-color: white;
-}
-
-a, a:hover {
-	color: inherit;
-	text-decoration: none;
-}
-
-ul {
-	margin: 32px 0;
-	list-style: disc;
-	padding-left: 32px;
-}
-
-p {
-	margin: 16px 0;
-	line-height: 1.8;
-
-	&.notice,
-	&.alert {
-		margin: 0;
-	}
-}
-
-section { padding: 6rem 0 3rem; }
-
-.content {
-	max-width: 1100px;
-	margin: 0 auto;
-	width: 100%;
-	text-align: center;
-}
-/*.content p { display: none }*/
+.content { text-align: center; }
 
 .jumbotron {
     min-height: 100vh;
@@ -105,201 +41,21 @@ section { padding: 6rem 0 3rem; }
   padding-bottom: .5em;
 }
 
-.sign-in-up {
-    color: #e3efee;
-    font-weight: 300;
-    line-height: 2rem;
-    background: rgba(255, 255, 255, 0.7);
-    min-width: 300px;
-    width: 420px;
-    padding: 40px;
-    margin: 0 auto;
-    border-radius: 4px;
-    box-shadow: 0 4px 10px 4px rgba(19,35,47,0.3);
-
-    label {
-      display: inline-block;
-    }
-
-    label[for='user_remember_me'] {
-    	vertical-align: middle;
-    }
-}
-
-::-webkit-input-placeholder { color: black; }
-:-moz-placeholder { /* Firefox 18- */ color: black; }
-::-moz-placeholder {  /* Firefox 19+ */ color: black; }
-:-ms-input-placeholder { color: black; }
-
-input {
-    color: #222;
-}
-
-.form-def {
-	display: block;
-    width: 100%;
-    border-radius: 4px;
-    padding: 10px 10px;
-    border: #fff solid 1px;
-}
-
-.pw {
-    letter-spacing: 1.5px;
-}
-
-
-.btn {
-    font-size: 16px;
-    color: #fff;
-    background: #3ea9f5;
-    width: 19vw;
-    max-width: 120px;
-    margin: 0 4px;
-    padding: 6px 6px;
-}
-
-.btn:hover,.btn:focus {
-    color: #fff;
-    background: #666;
-    transition: background .15s ease-in-out;
-}
-
-.btn-secondary {
-    border: 2px solid #222;
-    color: #222;
-    background: none;
-}
-
-.btn-secondary:hover,.btn-secondary:focus {
-    color: #69befb;
-    border: 2px solid #69befb;
-    background: none;
-    transition: color .15s ease-in-out, border .15s ease-in-out;
-}
-
-.tabs {
-	list-style: none;
-	padding: 0;
-	margin: 0 0 1em 0;
-}
-.tabs:after {
-	content: "";
-	display: table;
-	clear: both;
-}
-.tabs li a {
-	display: block;
-	text-decoration: none;
-	padding: 0.5em;
-	background: rgba(160, 179, 176, 0.25);
-	color: #a0b3b0;
-	font-size: 20px;
-	float: left;
+.log-in {
+	margin: 20% auto;
+	padding: 1em;
 	width: 50%;
-	text-align: center;
-	cursor: pointer;
-	-webkit-transition: .5s ease;
-	transition: .5s ease;
-}
-.tabs li a:hover {
-	background: #3598de;
-	color: #ffffff;
-}
-.tabs .active a {
-	background: #3ea9f5;
-	color: #ffffff;
+	background-color: rgba(255, 255, 255, 0.8);
+
+	h2 { color: #3ea9f5; }
 }
 
-.tab-forms {
-	text-align: center;
-	font-weight: 300;
-  margin: 0 0;
-}
-.tab-forms > div:last-child {
-	display: none;
-}
-
-#login a { color: black; }
-#login:after, #signup:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-#login > div, #signup > div {
-  float: left;
-  width: 48%;
-  margin-right: 4%;
-}
-#login > div:last-child, #signup > div:last-child {
-  margin: 0;
-}
-
-.field { 
-  margin-bottom: 16px;
-	text-align: left;
-	position: relative;
-	color: black;
-  overflow: hidden;
-}
-.field input { 
-  display: inline-block; 
-  position: relative; 
-  background-color: white;
-}
-.field input[type='checkbox'] { 
-  display: inline-block;
-  width: 7%; 
-  height: 16px;
-  vertical-align: middle;
-  margin-top: 0;
-} 
-
-input{
-  display: block;
-  width: 100%;
-  height: 100%;
-  padding: 5px 10px;
-  background: none;
-  background-image: none;
-  border: 1px solid #222;
-  border-radius: 0;
-  -webkit-transition: border-color .25s ease, box-shadow .25s ease;
-  transition: border-color .25s ease, box-shadow .25s ease;
-}
-input:focus {
-  outline: 0;
-  border-color: #3ea9f5;
-}
-
-.button {
-  border: 0;
-  outline: none;
-  border-radius: 0;
-  padding: 15px 0;
-  font-weight: 600;
-  letter-spacing: .1em;
-  background: #3ea9f5;
-  color: #ffffff;
-  -webkit-transition: all 0.5s ease;
-  transition: all 0.5s ease;
-  -webkit-appearance: none;
-}
-.button:hover, .button:focus {
-  background: #3598de;
-}
-.button-block {
-  display: block;
-  width: 100%;
-}
-
+/* TODO: change all pixel numbers to em and change media query widths */
 @media screen and (max-width: 550px) {
   .jumbotron {
     h1 {
       font-size: 80px;
     }
-  }
-  .sign-in-up {
-    width: 80%;
   }
 }
 
@@ -321,68 +77,6 @@ input:focus {
 				font-size: 100px;
 			}
 		}
-
-		.sign-in-up {
-			width: 60%;
-
-			.actions {
-				input[type='submit'] {
-					padding: 16px 0;
-					font-size: 24px;
-					margin: 12px 0;
-				}
-			}
-
-			.tabs {
-				.tab {
-					a {
-						padding: 1em 0;
-						font-size: 2em;
-					}
-				}
-			}
-
-			label {
-				margin: 0;
-				font-size: 24px;
-			}
-			.form-def {
-				border-radius: 4px;
-				padding: 16px;
-				font-size: 24px;
-				margin: 12px 0;
-				border-width: 3px;
-			}
-
-			.tab-forms {
-				#login {
-					a {
-						font-size: 24px;
-					}
-					h3 {
-						font-size: 24px;
-					}
-					.new_user {
-						.field {
-							margin-bottom: 8px;
-
-							input[type='checkbox'] {
-								height: 16px;
-								margin-top: 0;
-								width: 8%;
-								vertical-align: middle;
-							}
-						}
-					}
-				}
-
-				#signup {
-					h3 {
-						font-size: 24px;
-					}
-				}
-			}
-		}
 	}
 }
 /**mobile media queries **/
@@ -393,68 +87,6 @@ input:focus {
 
 			h1 {
 				font-size: 140px;
-			}
-		}
-
-		.sign-in-up {
-			width: 85%;
-
-			.actions {
-				input[type='submit'] {
-					padding: 48px 0;
-					font-size: 48px;
-					margin: 36px 0;
-				}
-			}
-
-			.tabs {
-				.tab {
-					a {
-						padding: 48px 0;
-						font-size: 48px;
-					}
-				}
-			}
-
-			label {
-				margin: 16px 0;
-				font-size: 48px;
-			}
-			.form-def {
-				border-radius: 8px;
-				padding: 36px 36px;
-				font-size: 48px;
-				margin: 24px 0;
-				border-width: 3px;
-			}
-
-			.tab-forms {
-				#login {
-					a {
-						font-size: 36px;
-					}
-					h3 {
-						font-size: 40px;
-					}
-					.new_user {
-						.field {
-							margin-bottom: 16px;
-
-							input[type='checkbox'] {
-								height: 48px;
-								margin-top: 0;
-								width: 12%;
-								vertical-align: middle;
-							}
-						}
-					}
-				}
-
-				#signup {
-					h3 {
-						font-size: 40px;
-					}
-				}
 			}
 		}
 	}

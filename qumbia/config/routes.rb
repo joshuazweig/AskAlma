@@ -13,6 +13,8 @@ Rails.application.routes.draw do
     resources :answers
   end
 
+  resources :users, only: [:profile]
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
@@ -24,6 +26,8 @@ Rails.application.routes.draw do
   get 'searches/search_questions' => 'searches#search_questions', as: 'search_questions'
 
   get 'searches/search_answers' => 'searches#search_answers', as: 'search_answers'
+
+  get 'users/profile' => 'users#profile', as: :profile
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

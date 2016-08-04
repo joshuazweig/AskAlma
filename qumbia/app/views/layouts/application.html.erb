@@ -29,6 +29,15 @@
 					<p>ask a question</p>
 					<% end -%>
 				</li>
+				<li>
+					<% if user_signed_in? %>
+  						<li>
+							<%= link_to(profile_path) do %>
+							<p>profile</p>
+							<% end -%>
+  						</li>
+					<% end %>
+				</li>
 			</ul>
 			<ul class="right">
 				<li>

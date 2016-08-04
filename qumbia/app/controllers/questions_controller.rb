@@ -43,6 +43,9 @@ class QuestionsController < ApplicationController
 		redirect_to questions_path
 	end
 
+	def profile
+	end
+
 	private
 		def question_params
 			params.require(:question).permit(:title, :text)

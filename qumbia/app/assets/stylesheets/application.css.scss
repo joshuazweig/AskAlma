@@ -63,8 +63,77 @@ nav ul li.action-item:hover {
 }
 nav ul.right { float: right; }
 
+/** MAIN & SECONDARY NAV OVERRIDES **/
+nav {
+	&.main-nav {
+		top: 0;
+	}
+
+	&.sec-nav {
+		top: 64px;
+	}
+}
+
 .jumbotron {
 	background-color: white;
+}
+
+/** MAIN NAV + SEARCH BAR */
+.main-nav {
+	background: #3ea9f5;
+
+	ul {
+		text-align: center;
+		width: 100%;
+		/**
+		 * display: flex;
+		 * justify-content: space-between;
+		 */
+
+		li.action-item {
+			position: absolute;
+			left: 0;
+
+			p {
+				font-size: 1.5rem;
+			}
+		}
+
+		button {
+			color: #fff;
+			background: transparent;
+			font-size: 20px;
+			padding: 0;
+		}
+
+		li.search-form {
+			line-height: 64px;
+			width: 55%; 
+
+			&:hover {
+				background-color: transparent;
+				cursor: default;
+			}
+
+			form {
+				float: right;
+				width: 90%;
+			}
+
+			#searchbar {
+				height: 2.5rem;
+				border-radius: .5rem;
+				border: none;
+				opacity: 0.9;
+				padding: 1rem;
+				width: 100%;
+				&:hover {
+					opacity: 1.0;
+					transition: opacity .25s ease;
+				}
+			}
+		}
+	}
 }
 
 /* Footer */

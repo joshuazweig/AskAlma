@@ -3,6 +3,7 @@ class AnswersController < ApplicationController
   
   before_action :check_auth
 
+  
     def check_auth
        unless user_signed_in?
          redirect_to :controller => :questions, :action => 'index'
@@ -10,19 +11,26 @@ class AnswersController < ApplicationController
     end 
   
   def new
-    @question = Question.find(params[:question_id])
+    @question = Question.find(params["question_id"].to_i)
     @answer = @question.answers.build
     respond_with(@answer)
   end
 
   def create
-    @question = Question.find(params[:question_id])
-    @answer = @question.answers.create(answer_params)
-    @answer.user_id = current_user.id
-    if @answer.save
-      redirect_to question_path(@question)
-    else 
-      render 'new'
+    @question = Question.find(params[:question_id].to_i)
+    @answer = @question.answers.build(answer_params)
+    @answer.user = current_user
+    respond_to do |format|
+      if @answer.save
+        format.html { redirect_to @answer, notice: "Save process completed!" }
+        format.json { render json: @answer}
+      else
+        format.html { 
+          flash.now[:notice]="Save proccess coudn't be completed!" 
+          render :new 
+        }
+        format.json { render json: "Answer failed to post" }
+      end
     end
   end
   

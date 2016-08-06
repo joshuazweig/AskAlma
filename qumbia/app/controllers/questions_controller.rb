@@ -1,11 +1,42 @@
 class QuestionsController < ApplicationController
+	respond_to :html, :json
+
 	def index
 		@questions = Question.all
+		@questions_json =  @questions.to_json( 
+			:include=> 
+			[
+					{:user => 
+						{
+							:only => [:email]
+						}
+					},
+					{:answers => 
+						{ 
+							:include => [
+											:upvotes, 
+											{:user => {:only => [:email]}}
+									    ], 
+							:except => [:created_at, :updated_at, :user_id]
+						}
+					},
+					{:categories =>
+						{
+							:only => [:name]
+						}
+					}
+			],
+			:except=> 
+			[
+				:created_at, :updated_at, :user_id
+			]
+		)
+		respond_with @questions_json
 	end
 
 	def show
 		@question = Question.find(params[:id])
-		@answers = @question.answers
+		respond_with @question
 	end
 	
 	def new

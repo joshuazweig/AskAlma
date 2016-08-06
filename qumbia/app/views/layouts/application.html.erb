@@ -10,10 +10,13 @@
 	<%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
 	<%= stylesheet_link_tag 'application', 'http://fonts.googleapis.com/css?family=Lato:100,300,400,300italic' %>
 	<%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+
+	<%= javascript_include_tag 'bundle'  %>
 	<%= csrf_meta_tags %>
 </head>
 
 <body>
+	<div class="navbar-wrapper">
 	<nav>
 		<div class="content">
 			<ul>
@@ -38,38 +41,37 @@
 			</ul>
 
 			<ul class="right">
+				<% if user_signed_in? %>
 				<li>
-					<% if user_signed_in? %>
-  						<li>
-  							<p><%= link_to('logout', destroy_user_session_path, :method => :delete) %></p>
-  						</li>
-					<% end %>
+					<p><%= link_to('logout', destroy_user_session_path, :method => :delete) %></p>
 				</li>
+				<% end %>
 				<li><a href="#"><p>help</p></a></li>
 			</ul>
 		</div>
 	</nav>
+	</div>
 
-	<p class="notice"><%= notice %></p>
-	<p class="alert"><%= alert %></p>
 
-	<div class="jumbotron">
+	<div class="jumbotron" id="header">
 		<div class="content">
 			<h1> Ask Alma </h1>
 			<div>
 				<h3> Quora for Columbia </h3>
 			</div>
+
+			<!-- large search bar here? -->
 		</div>
 	</div>
 
 
-<%= yield %>
+	<%= yield %>
 
 </body>
 
 <footer>
 	<div class="content">
-		<p>Built with <;3 by ADI's Qumbia Team!</p>
+		<p>Built with &hearts; by ADI's Qumbia Team!</p>
 	</div>
 </footer>
 </html>

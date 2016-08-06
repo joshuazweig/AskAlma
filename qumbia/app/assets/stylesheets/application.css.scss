@@ -25,7 +25,7 @@
 nav {
 	height: 64px;
 	width: 100%;
-	position: fixed;
+	position: relative;
 	top: 0;
 	background: #f5f5f5;
 	z-index: 2;
@@ -63,9 +63,20 @@ nav ul li.action-item:hover {
 }
 nav ul.right { float: right; }
 
-.jumbotron {
-	background-color: white;
+
+/* main content */
+.jumbotron { 
+	background-color: white; 
+	padding: 2em 0;
+	position: relative;
 }
+
+#header { 
+	text-align: center; 
+	background-color: #3ea9f5;
+	color: white;
+}
+
 
 /* Footer */
 footer {

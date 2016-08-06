@@ -1,12 +1,13 @@
 
 <!-- list of questions -->
 
-<div class="question">
+<div class="jumbotron" id="question">
 	<div class="content">
 		<% @questions.each do |question| %>
 			<div class="post">
 			<%= link_to(question) do %>
-			  	<h3>Question: <%= question.title %></h3>
+			  	<h3><%= question.title %></h3>
+			  	<!-- OP profile and icon -->
 			  	<p>Description: <%= question.text %></p>
 			<% end -%>
 			</div>

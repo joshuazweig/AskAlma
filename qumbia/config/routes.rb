@@ -15,6 +15,9 @@ Rails.application.routes.draw do
     resources :answers
   end
 
+  resources :answers, :defaults => { :format => 'json' } do 
+      resources :upvotes, :defaults => { :format => 'json'}
+  end
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

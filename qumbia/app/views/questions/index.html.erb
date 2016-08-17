@@ -1,9 +1,3 @@
-<!-- list of questions -->
-
-<div class="jumbotron" id="question">
-	<div class="content">
-		
-		<%= react_component('Main', currentUser: current_user.to_json()) %>
-
-	</div>
-</div>
+<% current_user_as_json = current_user.to_json(:include => :votes) %>
+				
+<%= react_component('Main', currentUser: current_user_as_json) %>

@@ -1,4 +1,4 @@
-class Upvote < ActiveRecord::Base
+class Vote < ActiveRecord::Base
   belongs_to :user
   belongs_to :answer
 end

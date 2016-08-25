@@ -2,14 +2,16 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+$base-midgrey: #eee;
+
 .question {
-	padding-top: 30px;
+	padding-top: 2rem;
+
+	p {
+		padding-bottom: 4rem;
+	}
 }
 
 .post:hover {
-	background-color: #eee;
-}
-
-.question p {
-	padding-bottom: 60px;
+	background-color: $base-midgrey;
 }

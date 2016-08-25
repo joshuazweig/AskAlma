@@ -16,42 +16,49 @@
 </head>
 
 <body>
-	<div class="navbar-wrapper">
-	<nav>
-		<div class="content">
-			<ul>
-				<li class="action-item">
-					<%= link_to(questions_path) do %>
-					<p>ASK ALMA</p>
-					<% end -%>
-				</li>
-				<li>
-					<%= link_to(questions_path) do %>
-					<p>newsfeed</p>
-					<% end -%>
-				</li>
-				<li>
-					<%= link_to(new_question_path) do %>
-					<p>ask a question</p>
-					<% end -%>
-				</li>
-				<li>
-					<%= render :partial => 'layouts/search' %>		
-				</li>
-			</ul>
+	<nav class="navbar navbar-default">
+		<div class="content container-fluid">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+		        <span class="sr-only">Toggle navigation</span>
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>
+		      </button>
+		      <%= link_to(questions_path, class: "navbar-brand action-item navbar-btn") do %>
+					ASK ALMA
+			  <% end -%>
+		    </div>
 
-			<ul class="right">
-				<% if user_signed_in? %>
-				<li>
-					<p><%= link_to('logout', destroy_user_session_path, :method => :delete) %></p>
-				</li>
-				<% end %>
-				<li><a href="#"><p>help</p></a></li>
-			</ul>
-		</div>
-	</nav>
-	</div>
+		    <!-- Collect nav links, form and other content for toggling -->
+		    <div class="collapse navbar-collapse">
+				<ul class="nav navbar-nav">
+					<li>
+						<%= link_to(questions_path, class: "navbar-btn") do %>
+						newsfeed
+						<% end -%>
+					</li>
+					<li>
+						<%= link_to(new_question_path, class: "navbar-btn") do %>
+						ask a question
+						<% end -%>
+					</li>
+				</ul>
+				<ul class="nav navbar-nav pull-right">
+					<% if user_signed_in? %>
+					<li>
+						<%= link_to('logout', destroy_user_session_path, :method => :delete, class: "navbar-btn") %>
+					</li>
+					<% end %>
+					<li><a href="#" class="navbar-btn">help</a></li>
+				</ul>
 
+				<div class="search-bar search-full">
+					<%= render :partial => 'layouts/search' %>
+				</div>
+			</div> <!-- navbar-collapse end -->
+		</div> <!-- container fluid end -->
+	</nav> <!-- nav end -->
 
 	<div class="jumbotron" id="header">
 		<div class="content">
@@ -61,6 +68,9 @@
 			</div>
 
 			<!-- large search bar here? -->
+			<div class="search-bar search-full">
+					<%= render :partial => 'layouts/search' %>
+			</div>
 		</div>
 	</div>
 

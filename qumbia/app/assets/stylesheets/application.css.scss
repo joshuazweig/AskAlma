@@ -20,95 +20,181 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+$base-blue: #3ea9f5;
+$base-midblue: #56b4f6;
+$base-grey: #f5f5f5;
+$base-midgrey: #eee;
+$base-graphite: #5a5a5a;
+
+$text-light: #dddddd;
 
 /* Navbar Styles */
-nav {
-	height: 64px;
+nav.navbar.navbar-default {
 	width: 100%;
 	position: relative;
 	top: 0;
-	background: #f5f5f5;
+	background: $base-blue;
+	border: none;
+	border-radius: 0;
+	color:  #fff;
 	z-index: 2;
-}
-nav ul {
-	height: 64px;
-	margin: 0;
-	padding: 0;
-	display: inline-block;
-	font-size: 0;
-	list-style: none;
-}
-nav ul li {
-	font-size: 16px;
-	padding: 0;
-	display: inline-block;
-}
-nav ul li p {
-	height: 64px;
-	line-height: 32px;
-	margin: 0;
-	padding: 16px 16px;
-}
-nav ul li:hover {
-	cursor: pointer;
-	background-color: #eee;
-}
-nav ul li.action-item {
-	color: white;
-	background-color: #3ea9f5;
-}
-nav ul li.action-item:hover {
-	color: white;
-	background-color: #56b4f6;
-}
-nav ul.right { float: right; }
+
+	.navbar-header {
+		.navbar-toggle {
+			margin: 1rem;
+		}
+		
+		.navbar-brand {
+			font-size: 1.5rem;
+			font-weight: bold;
+		}
+	}
 
 
-/* main content */
+	ul {
+		margin: 0;
+		padding: 0;
+		display: inline-block;
+		font-size: 0;
+		list-style: none;
+
+		li {
+			font-size: 1rem;
+			padding: 0;
+			display: inline-block;
+
+			p {
+				height: 4rem;
+				line-height: 2rem;
+				margin: 0;
+				padding: 1rem;
+			}
+
+			&.action-item {
+				color: white;
+				background-color: $base-blue;
+
+				&:hover {
+					background-color: $base-midblue;
+				}
+			}
+		}
+	}
+	
+	.navbar-btn {
+		color: #fff;
+	}
+}
+
+/* Search Bar */
+.search-bar {
+margin: 0 auto;
+width: 60%;
+
+	&.search-full {
+
+	}
+
+	&.search-collapse {
+
+	}
+
+	.navbar-form {
+		border: none;
+		box-shadow: none;
+		display: inline-block;
+		padding: .5rem;
+		width: 100%;
+
+		.input-group {
+			width: 100%;
+
+			button,
+			input,
+			select {
+				border: none;
+			}
+
+			.input-group-btn {
+				width: 1%;
+
+				button {
+					background: mix($base-blue, #fff, 50%);
+					color: #fff;
+					height: 2.25rem;
+					padding-top: .5rem;
+					padding-bottom: .5rem;
+				}
+			}
+
+			.search {
+				height: 2.25rem;
+			}
+		}
+	}
+}
+
+/* Main Content */
 .jumbotron { 
 	background-color: white; 
-	padding: 2em 0;
+	padding: 2rem 0;
 	position: relative;
 }
 
 #header { 
 	text-align: center; 
-	background-color: #3ea9f5;
+	background-color: $base-blue;
 	color: white;
+}
+
+.content {
+	&.content-main {
+		margin-bottom: 1.875rem;
+		
+		@media (max-width: 68.75rem) {
+			margin-left: .9375rem; // 15/16px
+			margin-right: .9375rem;
+		}
+	}
 }
 
 
 /* Footer */
 footer {
-	margin-top: 28px;
-	padding: 14px;
-	background-color: #5a5a5a;
-	color: white;
+	background-color: $base-graphite;
 	bottom: 0;
-}
-footer p {
-	color: #dddddd;
-	font-size: 12px;
-	display: inline-block;
+	color: #fff;
+	margin-top: 1.75rem;
+	padding: .875rem;
+	text-align: center;
+
+	p {
+		color: $text-light;
+		font-size: .75rem;
+		display: inline-block;
+
+		&.right {
+			float: right;
+		}
+	}
 }
 
-footer p.right { float: right; }
-
+/* Questions */
 .questionHeader {
-	border: 2px solid black;
-	padding: 10px;
+	border: .125rem solid black;
+	padding: .625rem;
 	text-align: left;
 }
 
 .questionBlockDiv {
-	border: 5px solid blue;
-	padding: 15px;
-	margin: 10px auto;
+	border: .375rem solid blue;
+	padding: 1rem;
+	margin: .625rem auto;
 	width: 60%;
 }
 
 .questionAnswer {
-	border: 3px solid red;
-	padding: 3px;
-	margin: 5px 8px;
+	border: .1875rem solid red;
+	padding: .1875rem;
+	margin: .375rem .5rem;
 }

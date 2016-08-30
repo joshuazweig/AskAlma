@@ -7,12 +7,18 @@ Rails.application.routes.draw do
   #   delete 'sign_out', :to => 'devise/sessions#destroy'
   # end
 
+  devise_scope :user do
+    get "/welcome", :to => "devise/sessions#new"
+    post "/welcome", :to => "devise/sessions#create"
+    delete "/logout", :to => "devise/sessions#destroy"
+  end
+
+  # get 'welcome/index'
+  get 'questions/index'
+
   resources :questions, :defaults => { :format => 'json' } do
     resources :answers, :defaults => { :format => 'json' } 
-  get 'welcome/index'
 
-  resources :questions do
-    resources :answers
   end
 
   resources :answers, :defaults => { :format => 'json' } do 

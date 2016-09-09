@@ -8,7 +8,7 @@
 	<title>ASK ALMA</title>
 	<%= stylesheet_link_tag 'base' %>
 	<%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
-	<%= stylesheet_link_tag 'application', 'http://fonts.googleapis.com/css?family=Lato:100,300,400,300italic' %>
+	<%= stylesheet_link_tag 'application', 'http://fonts.googleapis.com/css?family=Roboto|Roboto+Slab' %>
 	<%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
 
 	<%= csrf_meta_tags %>
@@ -52,7 +52,7 @@
 					<li><a href="#" class="navbar-btn">help</a></li>
 				</ul>
 
-				<div class="search-bar search-full">
+				<div class="search-bar">
 					<%= render :partial => 'layouts/search' %>
 				</div>
 			</div> <!-- navbar-collapse end -->

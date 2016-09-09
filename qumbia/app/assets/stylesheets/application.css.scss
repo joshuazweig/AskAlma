@@ -89,11 +89,12 @@ nav.navbar.navbar-default {
 
 /* Search Bar */
 .search-bar {
-margin: 0 auto;
-width: 60%;
+	margin: 0 auto;
+	width: 53%;
+	float: left !important;
 
 	&.search-full {
-
+		float: none !important;
 	}
 
 	&.search-collapse {

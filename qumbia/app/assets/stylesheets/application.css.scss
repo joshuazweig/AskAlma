@@ -36,6 +36,7 @@ nav.navbar.navbar-default {
 	background: $base-blue;
 	border: none;
 	border-radius: 0;
+	margin-bottom: 0;
 	color:  #fff;
 	z-index: 2;
 
@@ -158,7 +159,7 @@ width: 60%;
 	background-image: url('cover-img1.jpg');
 	background-position: center center;
 	background-repeat: no-repeat;
-	background-attachment: absolute;
+	background-attachment: fixed;
 	background-size: cover;
 	background-color: #3ea9f5;
 	height: 35vh;
@@ -197,24 +198,4 @@ footer {
 			float: right;
 		}
 	}
-}
-
-/* Questions */
-.questionHeader {
-	border: .125rem solid black;
-	padding: .625rem;
-	text-align: left;
-}
-
-.questionBlockDiv {
-	border: .375rem solid blue;
-	padding: 1rem;
-	margin: .625rem auto;
-	width: 60%;
-}
-
-.questionAnswer {
-	border: .1875rem solid red;
-	padding: .1875rem;
-	margin: .375rem .5rem;
 }

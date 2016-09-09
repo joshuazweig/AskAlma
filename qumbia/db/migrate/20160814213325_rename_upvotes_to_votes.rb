@@ -1,5 +1,5 @@
-class RenameVotesToVotes < ActiveRecord::Migration
+class RenameUpvotesToVotes < ActiveRecord::Migration
   def change
-  	rename_table :votes, :votes
+  	rename_table :upvotes, :votes
   end
 end

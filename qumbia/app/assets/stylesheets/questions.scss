@@ -1,17 +1,56 @@
+$base-midgrey: #eee;
+
 // Place all the styles related to the questions controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-$base-midgrey: #eee;
 
-.question {
-	padding-top: 2rem;
+.questionBlockDiv {
+	border: 1px solid transparent;
+	margin-bottom: 2em;
 
-	p {
-		padding-bottom: 4rem;
+	button:last-child {
+		display: block;
+		margin-top: 3em;
+		margin-left: 1em;
+	}
+}
+/*.questionBlockDiv:hover {
+	background-color: #eee;
+}*/
+
+.questionHeader {
+	border: 1px solid transparent;
+	padding: 0.5em 1em;
+
+	b {
+		display: block;
+	}
+
+	em {
+		display: block;
+		font-size: 2em;
+		padding: 0.5em 0em;
 	}
 }
 
-.post:hover {
-	background-color: $base-midgrey;
+.questionAnswer {
+	border: 1px solid transparent;
+	padding: 1.5em 2em;
+
+	b {
+		float: left;
+	}
+
+	em {
+		float: left;
+		clear: both;
+	}
+
+	button {
+		font-size: 0.8em;
+		float: right !important;
+		right: 0;
+		margin: 0em !important;
+	}
 }

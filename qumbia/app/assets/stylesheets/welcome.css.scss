@@ -79,7 +79,8 @@ section { padding: 6rem 0 3rem; }
 }
 
 .jumbotron {
-    height: 100vh;
+    height: auto;
+    /* min-height: 100vh; */
     background: #3ea9f5;
     margin-bottom: 0;
 }

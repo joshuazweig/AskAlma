@@ -1,3 +1,7 @@
-<% current_user_as_json = current_user.to_json(:include => :votes) %>
-				
-<%= react_component('Main', currentUser: current_user_as_json) %>
+<div class="jumobotron" id="question">
+	<div class="content">
+		<% current_user_as_json = current_user.to_json(:include => :votes) %>
+						
+		<%= react_component('Main', currentUser: current_user_as_json) %>
+	</div>
+</div>

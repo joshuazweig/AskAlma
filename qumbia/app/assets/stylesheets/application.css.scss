@@ -145,10 +145,26 @@ width: 60%;
 	position: relative;
 }
 
+@media screen and (max-width: 1100px) {
+	.jumbotron .content {
+		width: 96%;
+		margin: 0 2%;
+	}
+}
+
 #header { 
 	text-align: center; 
-	background-color: $base-blue;
 	color: white;
+	background-image: url('cover-img1.jpg');
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-attachment: absolute;
+	background-size: cover;
+	background-color: #3ea9f5;
+	height: 35vh;
+}
+#header h1, h3 {
+	color: white !important;
 }
 
 .content {

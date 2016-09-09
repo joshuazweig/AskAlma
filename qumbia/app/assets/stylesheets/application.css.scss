@@ -71,10 +71,25 @@ nav ul.right { float: right; }
 	position: relative;
 }
 
+@media screen and (max-width: 1100px) {
+	.jumbotron .content {
+		width: 96%;
+		margin: 0 2%;
+	}
+}
+
 #header { 
 	text-align: center; 
+	background-image: url('cover-img1.jpg');
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-attachment: absolute;
+	background-size: cover;
 	background-color: #3ea9f5;
-	color: white;
+	height: 35vh;
+}
+#header h1, h3 {
+	color: white !important;
 }
 
 
@@ -85,30 +100,18 @@ footer {
 	background-color: #5a5a5a;
 	color: white;
 	bottom: 0;
-}
-footer p {
-	color: #dddddd;
-	font-size: 12px;
-	display: inline-block;
-}
-
-footer p.right { float: right; }
-
-.questionHeader {
-	border: 2px solid black;
-	padding: 10px;
-	text-align: left;
+	
+	p {
+		color: #dddddd;
+		font-size: 12px;
+		display: inline-block;
+	}
+	p.right { float: right; }
 }
 
-.questionBlockDiv {
-	border: 5px solid blue;
-	padding: 15px;
-	margin: 10px auto;
-	width: 60%;
-}
-
-.questionAnswer {
-	border: 3px solid red;
-	padding: 3px;
-	margin: 5px 8px;
+@media screen and (max-width: 1100px) {
+	footer .content {
+		width: 96%;
+		margin: 0 2%;
+	}
 }

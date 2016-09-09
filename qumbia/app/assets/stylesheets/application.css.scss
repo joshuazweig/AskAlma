@@ -43,7 +43,7 @@ nav.navbar.navbar-default {
 		.navbar-toggle {
 			margin: 1rem;
 		}
-		
+
 		.navbar-brand {
 			font-size: 1.5rem;
 			font-weight: bold;
@@ -124,6 +124,10 @@ width: 60%;
 					height: 2.25rem;
 					padding-top: .5rem;
 					padding-bottom: .5rem;
+					&:hover {
+						background: mix($base-blue, #000, 85%);
+						transition: background .5s;
+					}
 				}
 			}
 
